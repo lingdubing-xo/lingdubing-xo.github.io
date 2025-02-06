@@ -12,6 +12,17 @@
       </tags>
   </entry>
   <entry>
+    <title>fastapi-sqlmodel的使用</title>
+    <url>/2025/02/05/fastapi-sqlmodel%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <categories>
+        <category>Python Web开发</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>napcat结合koishi制作qq机器人插件</title>
     <url>/2025/02/02/napcat%E7%BB%93%E5%90%88koishi/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注:这篇教程是 2025-02-02 所创，所著内容对以后不一定有效，仅提供借鉴参考意义，相关<a href="https://www.bilibili.com/video/BV1PGFXe1E3G/?spm_id_from=333.1387.homepage.video_card.click&vd_source=540b90b530334be98a9c1f8721345cef">视频教程</a></p>
@@ -19,17 +30,6 @@
 ]]></content>
       <categories>
         <category>QQ机器人</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>fastapi-sqlmodel的使用</title>
-    <url>/2025/02/05/fastapi-sqlmodel%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <categories>
-        <category>Python Web开发</category>
       </categories>
       <tags>
         <tag>开发</tag>
