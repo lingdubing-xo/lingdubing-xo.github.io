@@ -472,3 +472,8 @@ h6::before {
   animation: ccc 6s linear infinite;
 }
 
+.loading-img {
+  background: url(https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/img/Leonardo_Anime_XL_sky_2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
