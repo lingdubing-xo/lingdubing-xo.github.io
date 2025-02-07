@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo配置live2d看板娘</title>
+    <url>/2025/02/05/hexo%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <categories>
+        <category>Hexo搭建</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>fastapi-sqlmodel的使用</title>
     <url>/2025/02/05/fastapi-sqlmodel%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note simple"><p>默认 提示块标签</p>
@@ -14,11 +25,13 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo配置live2d看板娘</title>
-    <url>/2025/02/05/hexo%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <title>napcat结合koishi制作qq机器人插件</title>
+    <url>/2025/02/02/napcat%E7%BB%93%E5%90%88koishi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注:这篇教程是 2025-02-02 所创，所著内容对以后不一定有效，仅提供借鉴参考意义，相关<a href="https://www.bilibili.com/video/BV1PGFXe1E3G/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=540b90b530334be98a9c1f8721345cef">视频教程</a></p>
+<h2 id="第一步下载-napcat"><a href="#第一步下载-napcat" class="headerlink" title="第一步下载 napcat"></a>第一步下载 napcat</h2><p>napcat 的<a href="https://napneko.github.io/">官网地址</a>,下载最新的压缩包，保证你现在电脑 qq 是最新版本的</p>
+]]></content>
       <categories>
-        <category>Hexo搭建</category>
+        <category>QQ机器人</category>
       </categories>
       <tags>
         <tag>开发</tag>
@@ -47,19 +60,6 @@
       </categories>
       <tags>
         <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>napcat结合koishi制作qq机器人插件</title>
-    <url>/2025/02/02/napcat%E7%BB%93%E5%90%88koishi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注:这篇教程是 2025-02-02 所创，所著内容对以后不一定有效，仅提供借鉴参考意义，相关<a href="https://www.bilibili.com/video/BV1PGFXe1E3G/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=540b90b530334be98a9c1f8721345cef">视频教程</a></p>
-<h2 id="第一步下载-napcat"><a href="#第一步下载-napcat" class="headerlink" title="第一步下载 napcat"></a>第一步下载 napcat</h2><p>napcat 的<a href="https://napneko.github.io/">官网地址</a>,下载最新的压缩包，保证你现在电脑 qq 是最新版本的</p>
-]]></content>
-      <categories>
-        <category>QQ机器人</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
       </tags>
   </entry>
 </search>
