@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>fastapi-sqlmodel的使用</title>
-    <url>/2025/02/05/fastapi-sqlmodel%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="0-SQLModel-是什么"><a href="#0-SQLModel-是什么" class="headerlink" title="0.SQLModel 是什么"></a>0.SQLModel 是什么</h1><p><strong>SQLModel 是一个用于从 Python 代码中使用 Python 对象与 SQL 数据库进行交互的库。它被设计为直观、易于使用、高度兼容且健壮。</strong><br><strong>换而言之，就是将 python 类转化为数据库中数据表及对象的工具</strong><br><strong>对应的(开发文档)[<a href="https://sqlmodel.tiangolo.com/">https://sqlmodel.tiangolo.com/</a>]</strong></p>
-<h1 id="1-安装方式"><a href="#1-安装方式" class="headerlink" title="1.安装方式"></a>1.安装方式</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 前提是在虚拟环境下</span><br><span class="line">pip install sqlmodel</span><br></pre></td></tr></table></figure>
-<p>2.</p>
+    <title>vercel配置</title>
+    <url>/2025/02/03/vercel%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>vercel 是一个网站托管服务，类似与 github page，可以部署静态网站</p>
+<h2 id="第一步，登录到vercel-网站上，同时你需要有一个-github-账户，且里面有你需要创建的项目"><a href="#第一步，登录到vercel-网站上，同时你需要有一个-github-账户，且里面有你需要创建的项目" class="headerlink" title="第一步，登录到vercel 网站上，同时你需要有一个 github 账户，且里面有你需要创建的项目"></a>第一步，登录到<a href="https://vercel.com/">vercel 网站</a>上，同时你需要有一个 github 账户，且里面有你需要创建的项目</h2><h2 id="第二步关联上-github-的账户，然后主页-Add-New-project，"><a href="#第二步关联上-github-的账户，然后主页-Add-New-project，" class="headerlink" title="第二步关联上 github 的账户，然后主页 Add New project，"></a>第二步关联上 github 的账户，然后主页 Add New project，</h2>
+
+<style>
+#web_bg{
+  background: url(https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/img/c950811657d44cf4cea4c2a810eb913e.jpg)!important;
+  /*重新定义background会导致原有定位属性失效，所以也需要再声明一次加权的定位属性*/
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+</style>
+
+
 ]]></content>
       <categories>
-        <category>Python Web开发</category>
+        <category>Hexo搭建</category>
       </categories>
       <tags>
-        <tag>开发</tag>
+        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -66,28 +77,17 @@
       </tags>
   </entry>
   <entry>
-    <title>vercel配置</title>
-    <url>/2025/02/03/vercel%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>vercel 是一个网站托管服务，类似与 github page，可以部署静态网站</p>
-<h2 id="第一步，登录到vercel-网站上，同时你需要有一个-github-账户，且里面有你需要创建的项目"><a href="#第一步，登录到vercel-网站上，同时你需要有一个-github-账户，且里面有你需要创建的项目" class="headerlink" title="第一步，登录到vercel 网站上，同时你需要有一个 github 账户，且里面有你需要创建的项目"></a>第一步，登录到<a href="https://vercel.com/">vercel 网站</a>上，同时你需要有一个 github 账户，且里面有你需要创建的项目</h2><h2 id="第二步关联上-github-的账户，然后主页-Add-New-project，"><a href="#第二步关联上-github-的账户，然后主页-Add-New-project，" class="headerlink" title="第二步关联上 github 的账户，然后主页 Add New project，"></a>第二步关联上 github 的账户，然后主页 Add New project，</h2>
-
-<style>
-#web_bg{
-  background: url(https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/img/c950811657d44cf4cea4c2a810eb913e.jpg)!important;
-  /*重新定义background会导致原有定位属性失效，所以也需要再声明一次加权的定位属性*/
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-</style>
-
-
+    <title>fastapi-sqlmodel的使用</title>
+    <url>/2025/02/05/fastapi-sqlmodel%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="0-SQLModel-是什么"><a href="#0-SQLModel-是什么" class="headerlink" title="0.SQLModel 是什么"></a>0.SQLModel 是什么</h1><p><strong>SQLModel 是一个用于从 Python 代码中使用 Python 对象与 SQL 数据库进行交互的库。它被设计为直观、易于使用、高度兼容且健壮。</strong><br><strong>换而言之，就是将 python 类转化为数据库中数据表及对象的工具</strong><br><strong>对应的(开发文档)[<a href="https://sqlmodel.tiangolo.com/">https://sqlmodel.tiangolo.com/</a>]</strong></p>
+<h1 id="1-安装方式"><a href="#1-安装方式" class="headerlink" title="1.安装方式"></a>1.安装方式</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 前提是在虚拟环境下</span><br><span class="line">pip install sqlmodel</span><br></pre></td></tr></table></figure>
+<p>2.</p>
 ]]></content>
       <categories>
-        <category>Hexo搭建</category>
+        <category>Python Web开发</category>
       </categories>
       <tags>
-        <tag>运维</tag>
+        <tag>开发</tag>
       </tags>
   </entry>
 </search>
