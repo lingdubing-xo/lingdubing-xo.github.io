@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>fastapi-sqlmodel的使用</title>
-    <url>/2025/02/05/fastapi-sqlmodel%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="0-SQLModel-是什么"><a href="#0-SQLModel-是什么" class="headerlink" title="0.SQLModel 是什么"></a>0.SQLModel 是什么</h1><p><strong>SQLModel 是一个用于从 Python 代码中使用 Python 对象与 SQL 数据库进行交互的库。它被设计为直观、易于使用、高度兼容且健壮。</strong><br><strong>换而言之，就是将 python 类转化为数据库中数据表及对象的工具</strong><br><strong>对应的(开发文档)[<a href="https://sqlmodel.tiangolo.com/">https://sqlmodel.tiangolo.com/</a>]</strong></p>
-<h1 id="1-安装方式"><a href="#1-安装方式" class="headerlink" title="1.安装方式"></a>1.安装方式</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 前提是在虚拟环境下</span><br><span class="line">pip install sqlmodel</span><br></pre></td></tr></table></figure>
-<p>2.</p>
-]]></content>
-      <categories>
-        <category>Python Web开发</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo配置live2d看板娘</title>
     <url>/2025/02/05/hexo%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h4><div class="hide-block"><button type="button" class="hide-button" style="background-color:  blue;">点我预览</button><div class="hide-content"><p>这里有张图片：<br><img src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/seven.png" alt="image (1)" style="zoom:67%;" /></p>
@@ -53,6 +39,32 @@
       </tags>
   </entry>
   <entry>
+    <title>fastapi-sqlmodel的使用</title>
+    <url>/2025/02/05/fastapi-sqlmodel%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="0-SQLModel-是什么"><a href="#0-SQLModel-是什么" class="headerlink" title="0.SQLModel 是什么"></a>0.SQLModel 是什么</h1><p><strong>SQLModel 是一个用于从 Python 代码中使用 Python 对象与 SQL 数据库进行交互的库。它被设计为直观、易于使用、高度兼容且健壮。</strong><br><strong>换而言之，就是将 python 类转化为数据库中数据表及对象的工具</strong><br><strong>对应的(开发文档)[<a href="https://sqlmodel.tiangolo.com/">https://sqlmodel.tiangolo.com/</a>]</strong></p>
+<h1 id="1-安装方式"><a href="#1-安装方式" class="headerlink" title="1.安装方式"></a>1.安装方式</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 前提是在虚拟环境下, 安装sqlmodel以后他会一并安装其他依赖</span><br><span class="line">pip install sqlmodel</span><br></pre></td></tr></table></figure>
+<h1 id="2-使用方式"><a href="#2-使用方式" class="headerlink" title="2. 使用方式"></a>2. 使用方式</h1>]]></content>
+      <categories>
+        <category>Python Web开发</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>napcat结合koishi制作qq机器人插件</title>
+    <url>/2025/02/02/napcat%E7%BB%93%E5%90%88koishi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注:这篇教程是 2025-02-02 所创，所著内容对以后不一定有效，仅提供借鉴参考意义，相关<a href="https://www.bilibili.com/video/BV1PGFXe1E3G/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=540b90b530334be98a9c1f8721345cef">视频教程</a></p>
+<h2 id="第一步下载-napcat"><a href="#第一步下载-napcat" class="headerlink" title="第一步下载 napcat"></a>第一步下载 napcat</h2><p>napcat 的<a href="https://napneko.github.io/">官网地址</a>,下载最新的压缩包，保证你现在电脑 qq 是最新版本的</p>
+]]></content>
+      <categories>
+        <category>QQ机器人</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vercel配置</title>
     <url>/2025/02/03/vercel%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>vercel 是一个网站托管服务，类似与 github page，可以部署静态网站</p>
@@ -75,19 +87,6 @@
       </categories>
       <tags>
         <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>napcat结合koishi制作qq机器人插件</title>
-    <url>/2025/02/02/napcat%E7%BB%93%E5%90%88koishi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注:这篇教程是 2025-02-02 所创，所著内容对以后不一定有效，仅提供借鉴参考意义，相关<a href="https://www.bilibili.com/video/BV1PGFXe1E3G/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=540b90b530334be98a9c1f8721345cef">视频教程</a></p>
-<h2 id="第一步下载-napcat"><a href="#第一步下载-napcat" class="headerlink" title="第一步下载 napcat"></a>第一步下载 napcat</h2><p>napcat 的<a href="https://napneko.github.io/">官网地址</a>,下载最新的压缩包，保证你现在电脑 qq 是最新版本的</p>
-]]></content>
-      <categories>
-        <category>QQ机器人</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
       </tags>
   </entry>
 </search>
