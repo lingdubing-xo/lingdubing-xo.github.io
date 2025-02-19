@@ -1,51 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo配置live2d看板娘</title>
-    <url>/2025/02/05/hexo%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h4><div class="hide-block"><button type="button" class="hide-button" style="background-color:  blue;">点我预览</button><div class="hide-content"><p>这里有张图片：<br><img src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/seven.png" alt="image (1)" style="zoom:67%;" /></p>
-</div></div>
-<h1 id="0-用到的地址"><a href="#0-用到的地址" class="headerlink" title="0.用到的地址"></a>0.用到的地址</h1><p>(<strong>oh-my-live2d Github 地址</strong>)[<a href="https://github.com/oh-my-live2d/oh-my-live2d">https://github.com/oh-my-live2d/oh-my-live2d</a>]<br>(<strong>oh-my-live2d 官网 地址</strong>)[<a href="https://oml2d.hacxy.cn/">https://oml2d.hacxy.cn/</a>]<br>(<strong>live2d 模型下载 地址</strong>)[<a href="https://github.com/Eikanya/Live2d-model/tree/master">https://github.com/Eikanya/Live2d-model/tree/master</a>]<br>(<strong>静态文件 Statically 地址</strong>)[<a href="https://statically.io/convert/">https://statically.io/convert/</a>]<br>(<strong>DownGit Github 文件夹下载器 地址</strong>)[<a href="https://minhaskamal.github.io/DownGit/#/home">https://minhaskamal.github.io/DownGit/#/home</a>]</p>
-<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><div class="note info simple"><p>需搭配 Hexo 使用，我目前使用的 hexo 版本为 <wavy>7.3.0</wavy>，教程很简单，可能需要自备魔法</p>
-</div>
-<div class="note primary modern"><p>我使用的是 <wavy>hexo-oh-my-live2d</wavy>，可能有的人之前使用的是 hexo-live2d-helper，但是由于这个 helper 不再维护了，支持的模型较少。<br>所以我们采用这个新的库，它正在积极维护且支持所有模型<br>视频教程在<emp><a href="https://www.bilibili.com/video/BV1ptPkebEqZ/?spm_id_from=333.1387.homepage.video_card.click">https://www.bilibili.com/video/BV1ptPkebEqZ/?spm_id_from=333.1387.homepage.video_card.click</a></emp></p>
-</div>
-<h1 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h1><h3 id="1-安装-hexo-oh-my-live2d-插件"><a href="#1-安装-hexo-oh-my-live2d-插件" class="headerlink" title="1. 安装 hexo-oh-my-live2d 插件"></a>1. 安装 hexo-oh-my-live2d 插件</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 在 hexo 根目录 <span class="built_in">cmd</span> 下输入如下命令</span><br><span class="line"># 这里使用的是yarn命令，跟npm命令起到的效果是一样的</span><br><span class="line">yarn add hexo-oh-my-live2d --save</span><br></pre></td></tr></table></figure>
-<h3 id="2-配置样式文件"><a href="#2-配置样式文件" class="headerlink" title="2. 配置样式文件"></a>2. 配置样式文件</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这hexo的config.yml文件下增添以下内容</span></span><br><span class="line"><span class="comment"># 下面的path路径即为你想要使用模型的model地址</span></span><br><span class="line"><span class="comment"># live2d看板娘</span></span><br><span class="line"><span class="attr">OhMyLive2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">CDN:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files</span></span><br><span class="line">  <span class="comment"># CDN: https://registry.npmmirror.com/oh-my-live2d/0.13/files/dist/index.min.js</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">    <span class="comment"># importType: &#x27;cubism2&#x27; #  导入类型, 默认使用全量导入: complete , 可选值: complete, cubism2, cubism5</span></span><br><span class="line">    <span class="attr">libraryUrls:</span> <span class="comment"># 自定义 Cubism SDK 外部资源地址</span></span><br><span class="line">      <span class="attr">complete:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/complete.js</span></span><br><span class="line">      <span class="attr">cubism2:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism2.js</span></span><br><span class="line">      <span class="attr">cubism5:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism5.js</span></span><br><span class="line">    <span class="comment"># menus:</span></span><br><span class="line">    <span class="comment"># items: |</span></span><br><span class="line">    <span class="comment">#   (defaultItems)=&gt;&#123;</span></span><br><span class="line">    <span class="comment">#    return [</span></span><br><span class="line">    <span class="comment">#      ...defaultItems,</span></span><br><span class="line">    <span class="comment">#      &#123;</span></span><br><span class="line">    <span class="comment">#        id: &#x27;github&#x27;,</span></span><br><span class="line">    <span class="comment">#        icon: &#x27;github-fill&#x27;,</span></span><br><span class="line">    <span class="comment">#        title: &#x27;我的github&#x27;,</span></span><br><span class="line">    <span class="comment">#        onClick: ()=&gt;window.open(&#x27;https://github.com/hacxy&#x27;)</span></span><br><span class="line">    <span class="comment">#      &#125;</span></span><br><span class="line">    <span class="comment">#    ]</span></span><br><span class="line">    <span class="comment">#   &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># items:</span></span><br><span class="line">    <span class="comment">#   - id: &#x27;github&#x27;</span></span><br><span class="line">    <span class="comment">#     icon: &#x27;github-fill&#x27;</span></span><br><span class="line">    <span class="comment">#     title: &#x27;我的github&#x27;</span></span><br><span class="line">    <span class="comment">#     onClick: ()=&gt;window.open(&#x27;https://github.com/hacxy&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">mobileDisplay:</span> <span class="literal">false</span> <span class="comment"># 是否在移动端显示</span></span><br><span class="line">    <span class="attr">models:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">path:</span> <span class="string">&quot;https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8A%A0%E8%97%A4%E6%83%A0live2d/model/katou_01/katou_01.model.json&quot;</span></span><br><span class="line">        <span class="attr">mobilePosition:</span> [<span class="number">-10</span>, <span class="number">23</span>] <span class="comment"># 移动端时模型在舞台中的位置。 默认值: [0,0] [横坐标, 纵坐标]</span></span><br><span class="line">        <span class="attr">mobileScale:</span> <span class="number">0.1</span> <span class="comment"># 移动端时模型的缩放比例 默认值: 0.1</span></span><br><span class="line">        <span class="attr">mobileStageStyle:</span> <span class="comment"># 移动端时舞台的样式</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">180</span></span><br><span class="line">          <span class="attr">height:</span> <span class="number">166</span></span><br><span class="line">        <span class="attr">motionPreloadStrategy:</span> <span class="string">IDLE</span> <span class="comment"># 动作预加载策略 默认值: IDLE 可选值: ALL | IDLE | NONE</span></span><br><span class="line">        <span class="attr">position:</span> [<span class="number">20</span>, <span class="number">-150</span>] <span class="comment"># 模型在舞台中的位置。 默认值: [0,0] [横坐标, 纵坐标]</span></span><br><span class="line">        <span class="attr">scale:</span> <span class="number">0.15</span> <span class="comment"># 模型的缩放比例 默认值: 0.1</span></span><br><span class="line">        <span class="comment"># showHitAreaFrames: true # 是否显示点击区域 默认值: false</span></span><br><span class="line">        <span class="attr">stageStyle:</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">250</span></span><br><span class="line">          <span class="attr">height:</span> <span class="number">250</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">path:</span> <span class="string">&quot;https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E7%BA%B1%E9%9B%BElive2d/model/sagiri/sagiri.model.json&quot;</span></span><br><span class="line">        <span class="attr">scale:</span> <span class="number">0.12</span></span><br><span class="line">        <span class="attr">position:</span> [<span class="number">30</span>, <span class="number">0</span>]</span><br><span class="line">        <span class="attr">stageStyle:</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">250</span></span><br><span class="line">        <span class="attr">mobileScale:</span> <span class="number">0.08</span></span><br><span class="line">        <span class="attr">mobilePosition:</span> [<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">        <span class="attr">mobileStageStyle:</span> <span class="comment"># 移动端时舞台的样式</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">180</span></span><br><span class="line">    <span class="attr">parentElement:</span> <span class="string">document.body</span> <span class="comment">#为组件提供一个父元素，如果未指定则默认挂载到 body 中</span></span><br><span class="line">    <span class="attr">primaryColor:</span> <span class="string">&quot;var(--btn-bg)&quot;</span> <span class="comment"># 主题色 支持变量</span></span><br><span class="line">    <span class="attr">sayHello:</span> <span class="literal">false</span> <span class="comment"># 是否在初始化阶段打印项目信息</span></span><br><span class="line">    <span class="attr">tips:</span></span><br><span class="line">      <span class="attr">style:</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">230</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">120</span></span><br><span class="line">        <span class="attr">left:</span> <span class="string">calc(50%</span> <span class="bullet">-</span> <span class="string">20px)</span></span><br><span class="line">        <span class="attr">top:</span> <span class="string">-100px</span></span><br><span class="line">      <span class="attr">mobileStyle:</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">180</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">80</span></span><br><span class="line">        <span class="attr">left:</span> <span class="string">calc(50%</span> <span class="bullet">-</span> <span class="string">30px)</span></span><br><span class="line">        <span class="attr">top:</span> <span class="string">-100px</span></span><br><span class="line">      <span class="attr">idleTips:</span></span><br><span class="line">        <span class="attr">interval:</span> <span class="number">15000</span></span><br><span class="line">        <span class="comment"># message:</span></span><br><span class="line">        <span class="comment">#   - 你好呀~</span></span><br><span class="line">        <span class="comment">#   - 欢迎来到我的小站~</span></span><br><span class="line">        <span class="comment"># 自定义提示语 需要 引入 axios 库 ,也可以使用其他方法</span></span><br><span class="line">        <span class="attr">message:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          function()&#123;</span></span><br><span class="line"><span class="string">            return axios.get(&#x27;https://v1.hitokoto.cn?c=i&#x27;)</span></span><br><span class="line"><span class="string">              .then(function (response) &#123;</span></span><br><span class="line"><span class="string">                return response.data.hitokoto ;</span></span><br><span class="line"><span class="string">              &#125;)</span></span><br><span class="line"><span class="string">              .catch(function (error) &#123;</span></span><br><span class="line"><span class="string">                console.error(error);</span></span><br><span class="line"><span class="string">              &#125;);</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string"></span>        <span class="comment"># wordTheDay: true</span></span><br><span class="line">        <span class="comment"># 自定义  https://v1.hitokoto.cn  数据</span></span><br><span class="line">        <span class="comment"># wordTheDay: |</span></span><br><span class="line">        <span class="comment">#   function(wordTheDayData)&#123;</span></span><br><span class="line">        <span class="comment">#     return `$&#123;wordTheDayData.hitokoto&#125;    by.$&#123;wordTheDayData.from&#125;`;</span></span><br><span class="line">        <span class="comment">#   &#125;</span></span><br><span class="line">  <span class="comment"># then: |</span></span><br><span class="line">  <span class="comment">#   (oml2d)=&gt;&#123;</span></span><br><span class="line">  <span class="comment">#      setTimeout(() =&gt; &#123;</span></span><br><span class="line">  <span class="comment">#     oml2d.tipsMessage(&#x27;hello world&#x27;, 3000, 10);</span></span><br><span class="line">  <span class="comment">#   &#125;, 8000);</span></span><br><span class="line">  <span class="comment">#   &#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-配置-github-资源床"><a href="#3-配置-github-资源床" class="headerlink" title="3.配置 github 资源床"></a>3.配置 github 资源床</h3><p><strong>1.进入到 github 官网上创建一个<wavy>公开的</wavy>项目</strong><br><strong>2.将 github 创建的项目拉到本地，在本地创建一个存储文件的文件夹</strong></p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># github拉到本地</span><br><span class="line">git pull 仓库位置</span><br></pre></td></tr></table></figure>
-<h3 id="4-下载想要的模型"><a href="#4-下载想要的模型" class="headerlink" title="4.下载想要的模型"></a>4.下载想要的模型</h3><p>到(<strong>live2d 模型下载 地址</strong>)[<a href="https://github.com/Eikanya/Live2d-model/tree/master]下载想要的模型">https://github.com/Eikanya/Live2d-model/tree/master]下载想要的模型</a><br><strong>要是压缩包直接下载到本地即可，有些模型是文件夹格式的直接下载不下来的话，可以使用(DownGit 工具)[<a href="https://minhaskamal.github.io/DownGit/#/home]将文件夹的地址复制上去然后下载，保存到刚才创建的那个存储文件的文件夹里">https://minhaskamal.github.io/DownGit/#/home]将文件夹的地址复制上去然后下载，保存到刚才创建的那个存储文件的文件夹里</a></strong></p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 然后将下载的本地资源上传到github上</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;你想要加的注释&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/two.png" style="width:600px;"/></div></div>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/three.png" style="width:600px;"/></div></div>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/four.png" style="width:600px;"/></div></div>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/five.png" style="width:600px;"/></div></div>
-<h3 id="5-使用-Statically-做代理"><a href="#5-使用-Statically-做代理" class="headerlink" title="5.使用 Statically 做代理"></a>5.使用 Statically 做代理</h3><p><strong>*到(</strong>静态文件 Statically 地址<strong>)[<a href="https://statically.io/convert/]输入你">https://statically.io/convert/]输入你</a> github 上模型的文件地址，一般为 model.json 结尾*</strong></p>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/six.png" style="width:600px;"/></div></div>
-<p><strong>更改 config.yml 文件下的 path 路径即可修改模型</strong></p>
-<h1 id="3-自定义模型设置-几个重要的参数"><a href="#3-自定义模型设置-几个重要的参数" class="headerlink" title="3.自定义模型设置(几个重要的参数)"></a>3.自定义模型设置(几个重要的参数)</h1><ul>
-<li><strong>如果一个模型有多个衣服的话。path 路径要设置为一个数据形式，如我 config.yml 设置的那样</strong></li>
-<li><strong>dockedPosition 是设置模型在网页左边或者右边</strong></li>
-<li><strong>如果模型位置不恰当，请调整 position 属性,第一个为 x 轴，第二个为 y 轴，正数是向左向上，负数是向右向下</strong></li>
-</ul>
-<div class="note success flat"><p>到这里教程就已圆满结束了，感谢你的浏览，thank you</p>
-</div>
-
-
-<style>
-#web_bg{
-  background: url(https://ttn1btctkretlayp.public.blob.vercel-storage.com/533aaee8d51e3bd0@middle-GS0cSfpoomF66B0GSlSy5saiW9oaqz.jpg)!important;
-  /*重新定义background会导致原有定位属性失效，所以也需要再声明一次加权的定位属性*/
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-</style>
-
-
-]]></content>
+    <title>mysql知识总结(三)</title>
+    <url>/2025/02/18/mysql(3)/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
       <categories>
-        <category>Hexo搭建</category>
+        <category>数据库</category>
       </categories>
       <tags>
         <tag>开发</tag>
@@ -133,11 +93,89 @@
       </tags>
   </entry>
   <entry>
-    <title>mysql知识总结(三)</title>
-    <url>/2025/02/18/mysql(3)/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <title>hexo配置live2d看板娘</title>
+    <url>/2025/02/05/hexo%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="预览效果"><a href="#预览效果" class="headerlink" title="预览效果"></a>预览效果</h4><div class="hide-block"><button type="button" class="hide-button" style="background-color:  blue;">点我预览</button><div class="hide-content"><p>这里有张图片：<br><img src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/seven.png" alt="image (1)" style="zoom:67%;" /></p>
+</div></div>
+<h1 id="0-用到的地址"><a href="#0-用到的地址" class="headerlink" title="0.用到的地址"></a>0.用到的地址</h1><p>(<strong>oh-my-live2d Github 地址</strong>)[<a href="https://github.com/oh-my-live2d/oh-my-live2d">https://github.com/oh-my-live2d/oh-my-live2d</a>]<br>(<strong>oh-my-live2d 官网 地址</strong>)[<a href="https://oml2d.hacxy.cn/">https://oml2d.hacxy.cn/</a>]<br>(<strong>live2d 模型下载 地址</strong>)[<a href="https://github.com/Eikanya/Live2d-model/tree/master">https://github.com/Eikanya/Live2d-model/tree/master</a>]<br>(<strong>静态文件 Statically 地址</strong>)[<a href="https://statically.io/convert/">https://statically.io/convert/</a>]<br>(<strong>DownGit Github 文件夹下载器 地址</strong>)[<a href="https://minhaskamal.github.io/DownGit/#/home">https://minhaskamal.github.io/DownGit/#/home</a>]</p>
+<h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h1><div class="note info simple"><p>需搭配 Hexo 使用，我目前使用的 hexo 版本为 <wavy>7.3.0</wavy>，教程很简单，可能需要自备魔法</p>
+</div>
+<div class="note primary modern"><p>我使用的是 <wavy>hexo-oh-my-live2d</wavy>，可能有的人之前使用的是 hexo-live2d-helper，但是由于这个 helper 不再维护了，支持的模型较少。<br>所以我们采用这个新的库，它正在积极维护且支持所有模型<br>视频教程在<emp><a href="https://www.bilibili.com/video/BV1ptPkebEqZ/?spm_id_from=333.1387.homepage.video_card.click">https://www.bilibili.com/video/BV1ptPkebEqZ/?spm_id_from=333.1387.homepage.video_card.click</a></emp></p>
+</div>
+<h1 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h1><h3 id="1-安装-hexo-oh-my-live2d-插件"><a href="#1-安装-hexo-oh-my-live2d-插件" class="headerlink" title="1. 安装 hexo-oh-my-live2d 插件"></a>1. 安装 hexo-oh-my-live2d 插件</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 在 hexo 根目录 <span class="built_in">cmd</span> 下输入如下命令</span><br><span class="line"># 这里使用的是yarn命令，跟npm命令起到的效果是一样的</span><br><span class="line">yarn add hexo-oh-my-live2d --save</span><br></pre></td></tr></table></figure>
+<h3 id="2-配置样式文件"><a href="#2-配置样式文件" class="headerlink" title="2. 配置样式文件"></a>2. 配置样式文件</h3><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 这hexo的config.yml文件下增添以下内容</span></span><br><span class="line"><span class="comment"># 下面的path路径即为你想要使用模型的model地址</span></span><br><span class="line"><span class="comment"># live2d看板娘</span></span><br><span class="line"><span class="attr">OhMyLive2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">CDN:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files</span></span><br><span class="line">  <span class="comment"># CDN: https://registry.npmmirror.com/oh-my-live2d/0.13/files/dist/index.min.js</span></span><br><span class="line">  <span class="attr">option:</span></span><br><span class="line">    <span class="comment"># importType: &#x27;cubism2&#x27; #  导入类型, 默认使用全量导入: complete , 可选值: complete, cubism2, cubism5</span></span><br><span class="line">    <span class="attr">libraryUrls:</span> <span class="comment"># 自定义 Cubism SDK 外部资源地址</span></span><br><span class="line">      <span class="attr">complete:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/complete.js</span></span><br><span class="line">      <span class="attr">cubism2:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism2.js</span></span><br><span class="line">      <span class="attr">cubism5:</span> <span class="string">https://registry.npmmirror.com/oh-my-live2d/latest/files/lib/cubism5.js</span></span><br><span class="line">    <span class="comment"># menus:</span></span><br><span class="line">    <span class="comment"># items: |</span></span><br><span class="line">    <span class="comment">#   (defaultItems)=&gt;&#123;</span></span><br><span class="line">    <span class="comment">#    return [</span></span><br><span class="line">    <span class="comment">#      ...defaultItems,</span></span><br><span class="line">    <span class="comment">#      &#123;</span></span><br><span class="line">    <span class="comment">#        id: &#x27;github&#x27;,</span></span><br><span class="line">    <span class="comment">#        icon: &#x27;github-fill&#x27;,</span></span><br><span class="line">    <span class="comment">#        title: &#x27;我的github&#x27;,</span></span><br><span class="line">    <span class="comment">#        onClick: ()=&gt;window.open(&#x27;https://github.com/hacxy&#x27;)</span></span><br><span class="line">    <span class="comment">#      &#125;</span></span><br><span class="line">    <span class="comment">#    ]</span></span><br><span class="line">    <span class="comment">#   &#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># items:</span></span><br><span class="line">    <span class="comment">#   - id: &#x27;github&#x27;</span></span><br><span class="line">    <span class="comment">#     icon: &#x27;github-fill&#x27;</span></span><br><span class="line">    <span class="comment">#     title: &#x27;我的github&#x27;</span></span><br><span class="line">    <span class="comment">#     onClick: ()=&gt;window.open(&#x27;https://github.com/hacxy&#x27;)</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">mobileDisplay:</span> <span class="literal">false</span> <span class="comment"># 是否在移动端显示</span></span><br><span class="line">    <span class="attr">models:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">path:</span> <span class="string">&quot;https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8A%A0%E8%97%A4%E6%83%A0live2d/model/katou_01/katou_01.model.json&quot;</span></span><br><span class="line">        <span class="attr">mobilePosition:</span> [<span class="number">-10</span>, <span class="number">23</span>] <span class="comment"># 移动端时模型在舞台中的位置。 默认值: [0,0] [横坐标, 纵坐标]</span></span><br><span class="line">        <span class="attr">mobileScale:</span> <span class="number">0.1</span> <span class="comment"># 移动端时模型的缩放比例 默认值: 0.1</span></span><br><span class="line">        <span class="attr">mobileStageStyle:</span> <span class="comment"># 移动端时舞台的样式</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">180</span></span><br><span class="line">          <span class="attr">height:</span> <span class="number">166</span></span><br><span class="line">        <span class="attr">motionPreloadStrategy:</span> <span class="string">IDLE</span> <span class="comment"># 动作预加载策略 默认值: IDLE 可选值: ALL | IDLE | NONE</span></span><br><span class="line">        <span class="attr">position:</span> [<span class="number">20</span>, <span class="number">-150</span>] <span class="comment"># 模型在舞台中的位置。 默认值: [0,0] [横坐标, 纵坐标]</span></span><br><span class="line">        <span class="attr">scale:</span> <span class="number">0.15</span> <span class="comment"># 模型的缩放比例 默认值: 0.1</span></span><br><span class="line">        <span class="comment"># showHitAreaFrames: true # 是否显示点击区域 默认值: false</span></span><br><span class="line">        <span class="attr">stageStyle:</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">250</span></span><br><span class="line">          <span class="attr">height:</span> <span class="number">250</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">path:</span> <span class="string">&quot;https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E7%BA%B1%E9%9B%BElive2d/model/sagiri/sagiri.model.json&quot;</span></span><br><span class="line">        <span class="attr">scale:</span> <span class="number">0.12</span></span><br><span class="line">        <span class="attr">position:</span> [<span class="number">30</span>, <span class="number">0</span>]</span><br><span class="line">        <span class="attr">stageStyle:</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">250</span></span><br><span class="line">        <span class="attr">mobileScale:</span> <span class="number">0.08</span></span><br><span class="line">        <span class="attr">mobilePosition:</span> [<span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">        <span class="attr">mobileStageStyle:</span> <span class="comment"># 移动端时舞台的样式</span></span><br><span class="line">          <span class="attr">width:</span> <span class="number">180</span></span><br><span class="line">    <span class="attr">parentElement:</span> <span class="string">document.body</span> <span class="comment">#为组件提供一个父元素，如果未指定则默认挂载到 body 中</span></span><br><span class="line">    <span class="attr">primaryColor:</span> <span class="string">&quot;var(--btn-bg)&quot;</span> <span class="comment"># 主题色 支持变量</span></span><br><span class="line">    <span class="attr">sayHello:</span> <span class="literal">false</span> <span class="comment"># 是否在初始化阶段打印项目信息</span></span><br><span class="line">    <span class="attr">tips:</span></span><br><span class="line">      <span class="attr">style:</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">230</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">120</span></span><br><span class="line">        <span class="attr">left:</span> <span class="string">calc(50%</span> <span class="bullet">-</span> <span class="string">20px)</span></span><br><span class="line">        <span class="attr">top:</span> <span class="string">-100px</span></span><br><span class="line">      <span class="attr">mobileStyle:</span></span><br><span class="line">        <span class="attr">width:</span> <span class="number">180</span></span><br><span class="line">        <span class="attr">height:</span> <span class="number">80</span></span><br><span class="line">        <span class="attr">left:</span> <span class="string">calc(50%</span> <span class="bullet">-</span> <span class="string">30px)</span></span><br><span class="line">        <span class="attr">top:</span> <span class="string">-100px</span></span><br><span class="line">      <span class="attr">idleTips:</span></span><br><span class="line">        <span class="attr">interval:</span> <span class="number">15000</span></span><br><span class="line">        <span class="comment"># message:</span></span><br><span class="line">        <span class="comment">#   - 你好呀~</span></span><br><span class="line">        <span class="comment">#   - 欢迎来到我的小站~</span></span><br><span class="line">        <span class="comment"># 自定义提示语 需要 引入 axios 库 ,也可以使用其他方法</span></span><br><span class="line">        <span class="attr">message:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          function()&#123;</span></span><br><span class="line"><span class="string">            return axios.get(&#x27;https://v1.hitokoto.cn?c=i&#x27;)</span></span><br><span class="line"><span class="string">              .then(function (response) &#123;</span></span><br><span class="line"><span class="string">                return response.data.hitokoto ;</span></span><br><span class="line"><span class="string">              &#125;)</span></span><br><span class="line"><span class="string">              .catch(function (error) &#123;</span></span><br><span class="line"><span class="string">                console.error(error);</span></span><br><span class="line"><span class="string">              &#125;);</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string"></span>        <span class="comment"># wordTheDay: true</span></span><br><span class="line">        <span class="comment"># 自定义  https://v1.hitokoto.cn  数据</span></span><br><span class="line">        <span class="comment"># wordTheDay: |</span></span><br><span class="line">        <span class="comment">#   function(wordTheDayData)&#123;</span></span><br><span class="line">        <span class="comment">#     return `$&#123;wordTheDayData.hitokoto&#125;    by.$&#123;wordTheDayData.from&#125;`;</span></span><br><span class="line">        <span class="comment">#   &#125;</span></span><br><span class="line">  <span class="comment"># then: |</span></span><br><span class="line">  <span class="comment">#   (oml2d)=&gt;&#123;</span></span><br><span class="line">  <span class="comment">#      setTimeout(() =&gt; &#123;</span></span><br><span class="line">  <span class="comment">#     oml2d.tipsMessage(&#x27;hello world&#x27;, 3000, 10);</span></span><br><span class="line">  <span class="comment">#   &#125;, 8000);</span></span><br><span class="line">  <span class="comment">#   &#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-配置-github-资源床"><a href="#3-配置-github-资源床" class="headerlink" title="3.配置 github 资源床"></a>3.配置 github 资源床</h3><p><strong>1.进入到 github 官网上创建一个<wavy>公开的</wavy>项目</strong><br><strong>2.将 github 创建的项目拉到本地，在本地创建一个存储文件的文件夹</strong></p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># github拉到本地</span><br><span class="line">git pull 仓库位置</span><br></pre></td></tr></table></figure>
+<h3 id="4-下载想要的模型"><a href="#4-下载想要的模型" class="headerlink" title="4.下载想要的模型"></a>4.下载想要的模型</h3><p>到(<strong>live2d 模型下载 地址</strong>)[<a href="https://github.com/Eikanya/Live2d-model/tree/master]下载想要的模型">https://github.com/Eikanya/Live2d-model/tree/master]下载想要的模型</a><br><strong>要是压缩包直接下载到本地即可，有些模型是文件夹格式的直接下载不下来的话，可以使用(DownGit 工具)[<a href="https://minhaskamal.github.io/DownGit/#/home]将文件夹的地址复制上去然后下载，保存到刚才创建的那个存储文件的文件夹里">https://minhaskamal.github.io/DownGit/#/home]将文件夹的地址复制上去然后下载，保存到刚才创建的那个存储文件的文件夹里</a></strong></p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 然后将下载的本地资源上传到github上</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;你想要加的注释&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/two.png" style="width:600px;"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/three.png" style="width:600px;"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/four.png" style="width:600px;"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/five.png" style="width:600px;"/></div></div>
+<h3 id="5-使用-Statically-做代理"><a href="#5-使用-Statically-做代理" class="headerlink" title="5.使用 Statically 做代理"></a>5.使用 Statically 做代理</h3><p><strong>*到(</strong>静态文件 Statically 地址<strong>)[<a href="https://statically.io/convert/]输入你">https://statically.io/convert/]输入你</a> github 上模型的文件地址，一般为 model.json 结尾*</strong></p>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.statically.io/gh/lingdubing-xo/lingdubing-xo-pic/main/%E5%8D%9A%E5%AE%A2/%E9%85%8D%E7%BD%AElive2d%E7%9C%8B%E6%9D%BF%E5%A8%98/six.png" style="width:600px;"/></div></div>
+<p><strong>更改 config.yml 文件下的 path 路径即可修改模型</strong></p>
+<h1 id="3-自定义模型设置-几个重要的参数"><a href="#3-自定义模型设置-几个重要的参数" class="headerlink" title="3.自定义模型设置(几个重要的参数)"></a>3.自定义模型设置(几个重要的参数)</h1><ul>
+<li><strong>如果一个模型有多个衣服的话。path 路径要设置为一个数据形式，如我 config.yml 设置的那样</strong></li>
+<li><strong>dockedPosition 是设置模型在网页左边或者右边</strong></li>
+<li><strong>如果模型位置不恰当，请调整 position 属性,第一个为 x 轴，第二个为 y 轴，正数是向左向上，负数是向右向下</strong></li>
+</ul>
+<div class="note success flat"><p>到这里教程就已圆满结束了，感谢你的浏览，thank you</p>
+</div>
+
+
+<style>
+#web_bg{
+  background: url(https://ttn1btctkretlayp.public.blob.vercel-storage.com/533aaee8d51e3bd0@middle-GS0cSfpoomF66B0GSlSy5saiW9oaqz.jpg)!important;
+  /*重新定义background会导致原有定位属性失效，所以也需要再声明一次加权的定位属性*/
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+</style>
+
+
+]]></content>
       <categories>
-        <category>数据库</category>
+        <category>Hexo搭建</category>
+      </categories>
+      <tags>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>napcat结合koishi制作qq机器人插件</title>
+    <url>/2025/02/02/napcat%E7%BB%93%E5%90%88koishi/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注:这篇教程是 2025-02-02 所创，所著内容对以后不一定有效，因为 napcat 的版本更新很快，仅提供借鉴参考意义，相关<a href="https://www.bilibili.com/video/BV1PGFXe1E3G/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=540b90b530334be98a9c1f8721345cef">视频教程</a></p>
+<h1 id="1-napcat-安装及启动"><a href="#1-napcat-安装及启动" class="headerlink" title="1.napcat 安装及启动"></a>1.napcat 安装及启动</h1><h3 id="1-下载-napcat"><a href="#1-下载-napcat" class="headerlink" title="1.下载 napcat"></a>1.下载 napcat</h3><p><strong>napcat 的<a href="https://github.com/NapNeko/NapCatQQ/releases">官网地址</a>,下载最新的压缩包(最好的是最新版本，否则可能会出现 bug)，保证你现在电脑 qq 是最新版本的,然后解压压缩包文件</strong><br><strong>点击 napcat.bat,启动控制台程序,然后会出现一个二维码链接,它也会提醒你在文件夹中生成了二维码图片，这里看你喜欢哪种打开二维码的方式</strong></p>
+<h3 id="2-扫描二维码登录-及快速登录"><a href="#2-扫描二维码登录-及快速登录" class="headerlink" title="2.扫描二维码登录(及快速登录)"></a>2.扫描二维码登录(及快速登录)</h3><p><strong><a href="https://zh.qr-code.net/">在线解析二维码平台</a>,可以复制上面的二维码链接，就会出现二维码图片，扫描即可登录</strong><br><strong>快速登录(在已经登录过一次的情况下，右键记事本编辑 napcat.quick.bat, 将里面的号码(我用的时候是 10086)改成自己要登录的账号,然后再 qq 手机端勾选登录不用再确定)</strong></p>
+<h3 id="3-修改配置文件"><a href="#3-修改配置文件" class="headerlink" title="3.修改配置文件"></a>3.修改配置文件</h3><p><strong>打开 NapCat.Shell/versions/9.9.17-31245/resources/app/napcat/config/webui.json(文件路径因电脑而异)</strong><br><strong>host 改成 127.0.0.1, port 改为 6099</strong></p>
+<h3 id="4-打开-napcat-的-WebUI-界面"><a href="#4-打开-napcat-的-WebUI-界面" class="headerlink" title="4.打开 napcat 的 WebUI 界面"></a>4.打开 napcat 的 WebUI 界面</h3><p><strong>在浏览器地址栏输入 127.0.0.1:6099/webui,输入 webui.json 文件里的 token,在 v4.5.20 版本下 token 默认为 napcat，登录即进入页面</strong></p>
+<h3 id="5-新建网络配置"><a href="#5-新建网络配置" class="headerlink" title="5.新建网络配置"></a>5.新建网络配置</h3><p><strong>新建 websocket client url: ws://127.0.0.1:5140,token 自定义一个,待会要用</strong></p>
+<h1 id="2-koishi-安装及启动"><a href="#2-koishi-安装及启动" class="headerlink" title="2.koishi 安装及启动"></a>2.koishi 安装及启动</h1><h3 id="1-下载-koishi"><a href="#1-下载-koishi" class="headerlink" title="1.下载 koishi"></a>1.下载 koishi</h3><p><strong>打开<a href="https://koishi.js.org/manual/starter/boilerplate.html">koishi 官网</a>,按照官网教程安装 node.js 和 npm(或者 yarn)</strong></p>
+<h3 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 我这里用的yarn</span><br><span class="line"># 在任意文件夹命令行输入以下命令</span><br><span class="line">yarn create koishi</span><br></pre></td></tr></table></figure>
+<h3 id="3-下载-koishi-插件"><a href="#3-下载-koishi-插件" class="headerlink" title="3.下载 koishi 插件"></a>3.下载 koishi 插件</h3><p><strong>创建完他会自动打开对应的 koishiWebUI,下载 adapter-onebot,我安装的是 6.4.0 版本，对应的 4.16.6 的，安装完以后打开依赖管理</strong><br><strong>将 koishi(依赖名) 更新到最新的版本，koishi-plugin-adapter-onebot 版本保持不变</strong><br><strong>打开插件管理找到 adapter-onebot 插件填入对应的 qq 号,token 填入你刚才自定义的 napcat 的 token, 协议选择 ws-reserve，path 选择/onebot</strong></p>
+<h3 id="4-右上角启动插件"><a href="#4-右上角启动插件" class="headerlink" title="4.右上角启动插件"></a>4.右上角启动插件</h3><p><strong>对对应的 qq 号输入 help, 如果有相关的回复, 说明链接成功</strong></p>
+<h3 id="5-创建自定义插件"><a href="#5-创建自定义插件" class="headerlink" title="5.创建自定义插件"></a>5.创建自定义插件</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">yarn setup 插件名字</span><br></pre></td></tr></table></figure>
+<h3 id="6-应用自定义插件"><a href="#6-应用自定义插件" class="headerlink" title="6.应用自定义插件"></a>6.应用自定义插件</h3><p><strong>在插件配置右上角点击添加插件,然后应用就行</strong></p>
+<div class="note success flat"><p>到这里教程就已圆满结束了，感谢你的浏览，thank you</p>
+</div>
+
+
+<style>
+#web_bg{
+  background: url(https://ttn1btctkretlayp.public.blob.vercel-storage.com/6c463326eb8ecc39@middle-oONFL2NCbs9uJvXIbxck6k3pDJPByn.jpg)!important;
+  /*重新定义background会导致原有定位属性失效，所以也需要再声明一次加权的定位属性*/
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+</style>
+
+
+]]></content>
+      <categories>
+        <category>QQ机器人</category>
       </categories>
       <tags>
         <tag>开发</tag>
@@ -223,38 +261,32 @@
       </tags>
   </entry>
   <entry>
-    <title>napcat结合koishi制作qq机器人插件</title>
-    <url>/2025/02/02/napcat%E7%BB%93%E5%90%88koishi/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>注:这篇教程是 2025-02-02 所创，所著内容对以后不一定有效，因为 napcat 的版本更新很快，仅提供借鉴参考意义，相关<a href="https://www.bilibili.com/video/BV1PGFXe1E3G/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=540b90b530334be98a9c1f8721345cef">视频教程</a></p>
-<h1 id="1-napcat-安装及启动"><a href="#1-napcat-安装及启动" class="headerlink" title="1.napcat 安装及启动"></a>1.napcat 安装及启动</h1><h3 id="1-下载-napcat"><a href="#1-下载-napcat" class="headerlink" title="1.下载 napcat"></a>1.下载 napcat</h3><p><strong>napcat 的<a href="https://github.com/NapNeko/NapCatQQ/releases">官网地址</a>,下载最新的压缩包(最好的是最新版本，否则可能会出现 bug)，保证你现在电脑 qq 是最新版本的,然后解压压缩包文件</strong><br><strong>点击 napcat.bat,启动控制台程序,然后会出现一个二维码链接,它也会提醒你在文件夹中生成了二维码图片，这里看你喜欢哪种打开二维码的方式</strong></p>
-<h3 id="2-扫描二维码登录-及快速登录"><a href="#2-扫描二维码登录-及快速登录" class="headerlink" title="2.扫描二维码登录(及快速登录)"></a>2.扫描二维码登录(及快速登录)</h3><p><strong><a href="https://zh.qr-code.net/">在线解析二维码平台</a>,可以复制上面的二维码链接，就会出现二维码图片，扫描即可登录</strong><br><strong>快速登录(在已经登录过一次的情况下，右键记事本编辑 napcat.quick.bat, 将里面的号码(我用的时候是 10086)改成自己要登录的账号,然后再 qq 手机端勾选登录不用再确定)</strong></p>
-<h3 id="3-修改配置文件"><a href="#3-修改配置文件" class="headerlink" title="3.修改配置文件"></a>3.修改配置文件</h3><p><strong>打开 NapCat.Shell/versions/9.9.17-31245/resources/app/napcat/config/webui.json(文件路径因电脑而异)</strong><br><strong>host 改成 127.0.0.1, port 改为 6099</strong></p>
-<h3 id="4-打开-napcat-的-WebUI-界面"><a href="#4-打开-napcat-的-WebUI-界面" class="headerlink" title="4.打开 napcat 的 WebUI 界面"></a>4.打开 napcat 的 WebUI 界面</h3><p><strong>在浏览器地址栏输入 127.0.0.1:6099/webui,输入 webui.json 文件里的 token,在 v4.5.20 版本下 token 默认为 napcat，登录即进入页面</strong></p>
-<h3 id="5-新建网络配置"><a href="#5-新建网络配置" class="headerlink" title="5.新建网络配置"></a>5.新建网络配置</h3><p><strong>新建 websocket client url: ws://127.0.0.1:5140,token 自定义一个,待会要用</strong></p>
-<h1 id="2-koishi-安装及启动"><a href="#2-koishi-安装及启动" class="headerlink" title="2.koishi 安装及启动"></a>2.koishi 安装及启动</h1><h3 id="1-下载-koishi"><a href="#1-下载-koishi" class="headerlink" title="1.下载 koishi"></a>1.下载 koishi</h3><p><strong>打开<a href="https://koishi.js.org/manual/starter/boilerplate.html">koishi 官网</a>,按照官网教程安装 node.js 和 npm(或者 yarn)</strong></p>
-<h3 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"># 我这里用的yarn</span><br><span class="line"># 在任意文件夹命令行输入以下命令</span><br><span class="line">yarn create koishi</span><br></pre></td></tr></table></figure>
-<h3 id="3-下载-koishi-插件"><a href="#3-下载-koishi-插件" class="headerlink" title="3.下载 koishi 插件"></a>3.下载 koishi 插件</h3><p><strong>创建完他会自动打开对应的 koishiWebUI,下载 adapter-onebot,我安装的是 6.4.0 版本，对应的 4.16.6 的，安装完以后打开依赖管理</strong><br><strong>将 koishi(依赖名) 更新到最新的版本，koishi-plugin-adapter-onebot 版本保持不变</strong><br><strong>打开插件管理找到 adapter-onebot 插件填入对应的 qq 号,token 填入你刚才自定义的 napcat 的 token, 协议选择 ws-reserve，path 选择/onebot</strong></p>
-<h3 id="4-右上角启动插件"><a href="#4-右上角启动插件" class="headerlink" title="4.右上角启动插件"></a>4.右上角启动插件</h3><p><strong>对对应的 qq 号输入 help, 如果有相关的回复, 说明链接成功</strong></p>
-<h3 id="5-创建自定义插件"><a href="#5-创建自定义插件" class="headerlink" title="5.创建自定义插件"></a>5.创建自定义插件</h3><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">yarn setup 插件名字</span><br></pre></td></tr></table></figure>
-<h3 id="6-应用自定义插件"><a href="#6-应用自定义插件" class="headerlink" title="6.应用自定义插件"></a>6.应用自定义插件</h3><p><strong>在插件配置右上角点击添加插件,然后应用就行</strong></p>
-<div class="note success flat"><p>到这里教程就已圆满结束了，感谢你的浏览，thank you</p>
-</div>
-
-
-<style>
-#web_bg{
-  background: url(https://ttn1btctkretlayp.public.blob.vercel-storage.com/6c463326eb8ecc39@middle-oONFL2NCbs9uJvXIbxck6k3pDJPByn.jpg)!important;
-  /*重新定义background会导致原有定位属性失效，所以也需要再声明一次加权的定位属性*/
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-</style>
-
-
+    <title>工具网站推荐</title>
+    <url>/2025/02/18/%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note success modern"><p><a href="https://app.leonardo.ai/">leonardo.ai</a></p>
+<p class='p red'>简介:ai绘画网站</p></div>
+<div class="note success modern"><p><a href="https://labuladong.online/">labuladong 的算法平台</a></p>
+<p class='p red'>简介:算法解析与笔记网站</p></div>
+<div class="note success modern"><p><a href="https://statically.io/convert/">Statically</a></p>
+<p class='p red'>简介:挂载github静态资源的网站</p></div>
+<div class="note success modern"><p><a href="https://minhaskamal.github.io/DownGit/#/home">DownGit</a></p>
+<p class='p red'>简介:分离下载github文件夹的网站</p></div>
+<div class="note success modern"><p><a href="https://minhaskamal.github.io/DownGit/#/home">DownGit</a></p>
+<p class='p red'>简介:分离下载github文件夹的网站</p></div>
 ]]></content>
       <categories>
-        <category>QQ机器人</category>
+        <category>项目开发</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数组链表哈希表解析</title>
+    <url>/2025/02/19/%E6%95%B0%E7%BB%84%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E8%A1%A8%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <categories>
+        <category>算法</category>
       </categories>
       <tags>
         <tag>开发</tag>
@@ -313,27 +345,6 @@
       </tags>
   </entry>
   <entry>
-    <title>工具网站推荐</title>
-    <url>/2025/02/18/%E5%B7%A5%E5%85%B7%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note success modern"><p><a href="https://app.leonardo.ai/">leonardo.ai</a></p>
-<p class='p red'>简介:ai绘画网站</p></div>
-<div class="note success modern"><p><a href="https://labuladong.online/">labuladong 的算法平台</a></p>
-<p class='p red'>简介:算法解析与笔记网站</p></div>
-<div class="note success modern"><p><a href="https://statically.io/convert/">Statically</a></p>
-<p class='p red'>简介:挂载github静态资源的网站</p></div>
-<div class="note success modern"><p><a href="https://minhaskamal.github.io/DownGit/#/home">DownGit</a></p>
-<p class='p red'>简介:分离下载github文件夹的网站</p></div>
-<div class="note success modern"><p><a href="https://minhaskamal.github.io/DownGit/#/home">DownGit</a></p>
-<p class='p red'>简介:分离下载github文件夹的网站</p></div>
-]]></content>
-      <categories>
-        <category>项目开发</category>
-      </categories>
-      <tags>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vercel配置及优化图床加载方案</title>
     <url>/2025/02/03/vercel%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="0-Vercel-是什么"><a href="#0-Vercel-是什么" class="headerlink" title="0.Vercel 是什么"></a>0.Vercel 是什么</h1><p><strong>vercel 是一个网站托管服务，类似与 github page，可以部署静态网站, 我用它来部署 hexo 博客, 这个博客即为 vercel 部署</strong></p>
@@ -358,17 +369,6 @@
       </categories>
       <tags>
         <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数组链表哈希表解析</title>
-    <url>/2025/02/19/%E6%95%B0%E7%BB%84%E9%93%BE%E8%A1%A8%E5%93%88%E5%B8%8C%E8%A1%A8%E8%A7%A3%E6%9E%90/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>开发</tag>
       </tags>
   </entry>
   <entry>
